@@ -1,0 +1,403 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/josefin-sans-v32-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/josefin-sans-v32-latin-700.woff2') format('woff2');
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+ul,
+ol {
+  list-style: none;
+}
+
+:root {
+  --body-primary-color: #F2F2F2;
+  --input-primary-color: #FFFFFF;
+  --input-text-color: #393A4B;
+  --border-primary-color: #E3E4F1;
+  --border-bottom-color: #E3E4F1;
+}
+
+
+.dark-theme {
+  --body-primary-color: #171823;
+  --input-primary-color: #25273D;
+  --input-text-color: #C8CBE7;
+  --border-primary-color: #979797;
+  --border-bottom-color: #393A4B;
+
+}
+
+
+
+
+body {
+  background-color: var(--body-primary-color);
+  font-family: 'Josefin Sans';
+}
+
+
+.box {
+  padding-top: 68px;
+  background-image: url('../public/assets/bg-desktop-light.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 300px;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 70px;
+}
+
+.container {
+  max-width: 640px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.topBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.topBox__title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 15px;
+}
+
+
+
+.modeBtn {
+  transition: transform 7s ease, background-color 7s ease;
+  border: none;
+  background-color: inherit;
+}
+
+
+.form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+
+.formImg {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  z-index: 100;
+  margin-right: 40px;
+  position: absolute;
+  left: 520px;
+  border: 1px solid var(--border-primary-color);
+  background-color: inherit;
+}
+
+.formInput {
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  padding: 20px 25px 20px 72px;
+  width: 100%;
+  font-size: 18px;
+  font-family: 'Josefin Sans';
+  color: var(--input-text-color);
+  background-color: var(--input-primary-color);
+}
+
+.formInput:focus {
+  border: none;
+  outline: none;
+}
+
+.formInput::placeholder {
+  font-size: 18px;
+  font-family: 'Josefin Sans';
+}
+
+
+.bottomBox {}
+
+
+
+.list {
+  width: 100%;
+  height: 100%;
+}
+
+.listItem {
+  display: flex;
+  padding: 20px 25px;
+  background-color: var(--input-primary-color);
+  border-bottom: 1px solid var(--border-bottom-color);
+}
+
+.listItem:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+
+
+.itemTitle {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  margin-left: 24px;
+  margin-right: auto;
+  color: var(--input-text-color);
+}
+
+.checkBtn {
+  width: 24px;
+  height: 24px;
+  background-color: inherit;
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  width: 17.5px;
+  height: 17.5px;
+  background-color: inherit;
+  border: none;
+  display: none;
+  color: var(--input-text-color);
+}
+
+.listItem:hover .deleteBtn {
+  display: block;
+}
+
+.checked {
+  text-decoration: line-through;
+  opacity: 0.6
+}
+
+.allFilters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  background-color: var(--input-primary-color);
+  border-radius: 0 0 5px 5px;
+  margin-bottom: 50px;
+}
+
+.todoNumber {
+  font-size: 14px;
+  letter-spacing: -0.19px;
+  font-weight: 400;
+  opacity: 0.5;
+  color: var(--input-text-color);
+}
+
+.allBtn {}
+
+.btn {
+  border: none;
+  background-color: inherit;
+  font-family: 'Josefin Sans';
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.7;
+  color: var(--input-text-color);
+}
+
+.btn:hover {
+  opacity: 1;
+  color: var(--input-text-color);
+}
+
+.centerBtn {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+
+.activeBtn {}
+
+.completedBtn {}
+
+.clearBtn {}
+
+
+
+.lastTitle {
+  font-size: 14px;
+  font-family: 'Josefin Sans';
+  text-align: center;
+  opacity: 0.6;
+  color: var(--input-text-color);
+}
+
+
+@media (max-width:450px) {
+
+
+
+  .box {
+    padding-top: 48px;
+    background-size: 100% 200px;
+    padding-bottom: 48px;
+  }
+
+  .container {
+    max-width: 350px;
+    padding-left: 11px;
+    padding-right: 11px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .topBox__title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 15px;
+  }
+
+  .form {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+
+  .formImg {
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    left: 80px;
+  }
+
+  .formInput {
+    padding: 20px 23px 20px 52px;
+    font-size: 12px;
+  }
+
+
+  .formInput::placeholder {
+    font-size: 12px;
+  }
+
+  .listItem {
+    display: flex;
+    align-items: center;
+    padding: 18px 22px;
+  }
+
+  .list {
+    position: relative;
+  }
+
+
+  .itemTitle {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.25px;
+    margin-left: 20px;
+    margin-right: auto;
+    color: var(--input-text-color);
+  }
+
+  .checkBtn {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+  }
+
+  .deleteBtn {
+    width: 11px;
+    height: 11px;
+  }
+
+  .allFilters {
+    padding: 18px 21px;
+    margin-bottom: 40px;
+  }
+
+  .todoNumber {
+    font-size: 14px;
+    letter-spacing: -0.19px;
+    font-weight: 400;
+    opacity: 0.5;
+    color: var(--input-text-color);
+  }
+
+  .allBtn {}
+
+  .btn {
+    border: none;
+    background-color: inherit;
+    font-family: 'Josefin Sans';
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.7;
+    color: var(--input-text-color);
+  }
+
+  .btn:hover {
+    opacity: 1;
+    color: var(--input-text-color);
+  }
+
+  .centerBtn {
+    position: absolute;
+    bottom: 70px;
+    padding: 18px 21px;
+    left: 65px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--input-primary-color);
+    width: 320px;
+    gap: 19px;
+  }
+
+  .activeBtn {}
+
+  .completedBtn {}
+
+  .clearBtn {}
+
+
+
+  .lastTitle {
+    position: absolute;
+    bottom: 20px;
+    left: 120px;
+    font-size: 14px;
+    font-family: 'Josefin Sans';
+    text-align: center;
+    opacity: 0.6;
+    color: var(--input-text-color);
+  }
+
+
+}
